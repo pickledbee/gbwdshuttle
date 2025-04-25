@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBWD Shuttle Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the hero background */
+        .hero-bg {
+            background-image: url('https://i.ibb.co/3ywydjPx/Aaron-s-main-website-picture.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Add a subtle overlay for better text readability */
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Style for the form submission status message */
+        #form-status {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 500;
+            min-height: 1.5em; /* Reserve space to prevent layout shift */
+        }
+        .status-success {
+            color: #16a34a; /* Tailwind green-600 */
+        }
+        .status-error {
+            color: #dc2626; /* Tailwind red-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-700">GBWD Shuttle</a>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-green-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-green-700 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-700 transition duration-300">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-green-700 transition duration-300">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-700 transition duration-300">Contact Us</a>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 shadow">Book Now</a>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-green-700">Home</a>
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-green-700">About Us</a>
+            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-green-700">Services</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-green-700">Contact Us</a>
+            <a href="#contact" class="block px-6 py-3 bg-green-600 text-white text-center font-semibold rounded-b-lg hover:bg-green-700 transition duration-300 m-2">Book Now</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg relative text-white py-32 md:py-48">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight text-blue-500">GBWD Shuttle Service</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Green Bay to Wisconsin Dells</p>
+            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">Book Your Ride Now</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Service</h2>
+            <div class="max-w-lg mx-auto"> <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://i.ibb.co/rKj8RkTy/Chat-GPT-Image-Apr-25-2025-12-13-40-PM.png"
+                         alt="Shuttle van for group trips"
+                         class="w-full h-48 object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/9ca3af?text=Image+Error';">
+                    <div class="p-6 text-sm text-gray-700"> <h3 class="text-xl font-semibold text-gray-800 mb-3">Trips to Wisconsin Dells</h3>
+
+                        <ul class="list-disc list-inside space-y-1 mb-4 pl-2">
+                            <li>Fast and Direct! No Transfers! No 5 Hour Trips!</li>
+                            <li>Convenient: Open Year-Round, Operating 7 Days a week!</li>
+                            <li>Destination: Any Indoor or Outdoor Waterpark in Wisconsin Dells!</li>
+                            <li>Affordable: Only $50 for Round Trip Service!</li>
+                            <li>Comfort: Deluxe Coach from a Reputable Bus Line!</li>
+                            <li>Parking: Meet at Washington & Walnut St. Ramp (Green Bay)</li>
+                        </ul>
+
+                        <p class="font-semibold text-red-600 mb-4">
+                            Please book all trips at least two weeks in advance!
+                        </p>
+
+                        <h4 class="font-semibold text-gray-800 mb-2 text-base">GENERAL INFORMATION</h4>
+                        <div class="space-y-2">
+                             <p><span class="font-medium">Green Bay Boarding:</span> 7:10 AM & 1:10 PM</p>
+                             <p><span class="font-medium">Green Bay Departure:</span> 20 minutes after boarding time</p>
+                             <p><span class="font-medium">Waterpark Boarding:</span> Begins at park's closing time</p>
+                             <p><span class="font-medium">Waterpark Departure:</span> 20 minutes after boarding time</p>
+                             <p class="font-medium text-gray-800">All rides are same-day return trips only.</p>
+                        </div>
+
+                        <div class="mt-6 text-right">
+                             <a href="#contact" class="text-green-600 hover:text-green-800 font-medium">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="pt-16 md:pt-24 bg-gray-50">
+        <div class="container mx-auto px-6 mb-12 md:mb-16">
+            <div class="max-w-3xl mx-auto text-center md:text-left">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">About GBWD Shuttle Service</h2>
+                 <p class="text-gray-600 mb-4 leading-relaxed">
+                     We are dedicated to providing safe, reliable, and comfortable transportation services, specializing in routes between Green Bay and Wisconsin Dells. Our professional drivers and well-maintained vehicles ensure a pleasant journey every time.
+                 </p>
+                 <p class="text-gray-600 mb-4 leading-relaxed">
+                     Whether you're planning a family vacation, a weekend getaway, or need transport for a group event, count on us for punctual and courteous service. Your satisfaction is our top priority.
+                 </p>
+                 <div class="text-center">
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6 inline-block text-left">
+                        <li>Professional and Vetted Drivers</li>
+                        <li>Clean and Comfortable Vehicles</li>
+                        <li>On-Time Service Guarantee</li>
+                        <li>Competitive Pricing for GB-Dells Route</li>
+                    </ul>
+                 </div>
+                 <div class="mt-6 text-center">
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 shadow inline-block">Learn More</a>
+                 </div>
+            </div>
+        </div>
+        <div class="w-full">
+            <img src="https://i.ibb.co/Ngbdf2Fy/aaron-s-colorful-water-slides.jpg"
+                 alt="Colorful water slides in Wisconsin Dells"
+                 class="w-full h-96 object-cover"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x384/cccccc/666666?text=Image+Load+Error';">
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Book Your Ride or Get In Touch</h2>
+            <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition duration-300">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition duration-300">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition duration-300">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message / Booking Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Please include date, time, pickup/dropoff locations (Green Bay/Wisconsin Dells area), and number of passengers for booking inquiries." required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition duration-300"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" id="submit-button" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-lg w-full md:w-auto">Send Message</button>
+                    </div>
+                </form>
+                <div id="form-status"></div>
+                <div class="text-center mt-8 text-gray-600">
+                    <p>If you have questions call us at: <a href="tel:+19203018093" class="text-green-700 font-semibold hover:underline">920-301-8093</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="#home" class="px-3 hover:text-white">Home</a> |
+                <a href="#about" class="px-3 hover:text-white">About</a> |
+                <a href="#services" class="px-3 hover:text-white">Services</a> |
+                <a href="#contact" class="px-3 hover:text-white">Contact</a>
+            </div>
+            <p class="text-sm">&copy; 2025 GBWD Shuttle Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // --- Contact Form Submission ---
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const submitButton = document.getElementById('submit-button');
+
+        // *** Script URL is set to the latest provided /exec URL ***
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMb6Iii-ClOqVivlmF6WnZt1DINtsi6ShpoFM64gr0wmNQNABfw79tcS12pvYdUZhQvA/exec'; // New /exec URL provided by user
+
+        if (contactForm && scriptURL && scriptURL !== 'PASTE_YOUR_WEB_APP_URL_HERE') { // Check if form exists and URL is valid
+            contactForm.addEventListener('submit', e => {
+                e.preventDefault(); // Prevent default form submission
+                submitButton.disabled = true;
+                formStatus.textContent = 'Sending...';
+                formStatus.className = ''; // Clear previous status classes
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
+                    .then(response => response.json()) // Process the JSON response from Apps Script
+                    .then(data => {
+                        console.log('Response Data:', data); // Log the response for debugging
+
+                        // *** CORRECTED LOGIC STRUCTURE ***
+                        if (data.result === 'success') {
+                            formStatus.textContent = 'Message sent successfully!';
+                            formStatus.className = 'status-success';
+                            contactForm.reset(); // Clear the form
+
+                            // Check if the script sent back a payment URL (using the correct key from your script, e.g., 'paymentUrl' or 'venmoUrl')
+                            if (data.paymentUrl) { // <-- Make sure 'paymentUrl' matches the key returned by your Apps Script
+                                formStatus.textContent += ' Redirecting to payment...'; // Updated message
+                                // Redirect the user to the payment URL after a short delay
+                                setTimeout(() => {
+                                    window.location.href = data.paymentUrl; // <-- Use the same key here
+                                }, 2000); // 2-second delay
+                            }
+                            // If no paymentUrl is present, it just shows the success message.
+
+                        } else {
+                            // Handle errors reported by the script (e.g., data.result === 'error')
+                            formStatus.textContent = 'Error: ' + (data.message || 'Could not send message.');
+                            formStatus.className = 'status-error';
+                        }
+                    })
+                    .catch(error => {
+                        // Handle network errors or issues with the fetch itself
+                        console.error('Fetch Error!', error.message);
+                        formStatus.textContent = 'Error sending message. Please try again.';
+                        formStatus.className = 'status-error';
+                    })
+                    .finally(() => {
+                         // Only re-enable the button if not redirecting
+                         if (!formStatus.textContent.includes('Redirecting')) {
+                             submitButton.disabled = false;
+                         }
+                         // Optional: Hide status message after a few seconds if not redirecting
+                         if (!formStatus.textContent.includes('Redirecting')) {
+                             setTimeout(() => {
+                                 formStatus.textContent = '';
+                                 formStatus.className = '';
+                             }, 5000); // Hide after 5 seconds
+                         }
+                    });
+            });
+        } else if (!contactForm) {
+            console.error("Contact form element (#contact-form) not found.");
+        } else if (!scriptURL || scriptURL === 'PASTE_YOUR_WEB_APP_URL_HERE') {
+             console.warn("Contact form script URL has not been set. Form submissions will not work.");
+             // Optionally display a message to the user if the URL isn't set
+             if(formStatus) {
+                formStatus.textContent = 'Form submission is currently disabled.';
+                formStatus.className = 'status-error';
+             }
+        }
+    </script>
+
+</body>
+</html>
